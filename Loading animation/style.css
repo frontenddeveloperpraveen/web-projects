@@ -1,0 +1,9 @@
+button{
+    float: right;
+}
+.section{
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Style+Script&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    background:url(img.jpg);
+}
+
+.container{
+
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .icons h1{
+    font-family: 'Style Script', cursive;
+}
+.container .icons p, strong{
+    font-family: 'Poppins', sans-serif;
+}
+
+.timmer{
+    display: flex;
+    gap: 30px;
+    margin: 50px auto 0 auto;
+    border: white 2px solid;
+    padding: 0 40px;
+}
+
+.box{
+    width: 50;
+    height: 100;
+    margin:20px;
+    text-align: center;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container disable">
+        <input type="file" id="upload" hidden accept=".jpeg,.png,.jpg">
+        <div class="main-btns">
+            <button id="import">Import</button>
+            <button onclick="reset()" id="reset">Reset</button>
+            <button onclick='save()' id="save">Save</button>
+        </div>
+        <div class="preview">
+            <img src="design.png" alt="" srcset="">
+        </div>
+        <div class="controls">
+            <div class="options">
+                <button onclick="Select(0)">Brightness</button>
+                <button onclick="Select(1)">Saturation</button>
+                <button onclick="Select(2)">Inversion</button>
+                <button onclick="Select(3)">Grayscale</button>
+            </div>
+            <div class="scale">
+                <input type="range" value="100" max="200" min="0" id="scroller">
+                <input type="text" readonly id="display">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 215, 152);
+}
+
+.clock{
+
+    width: 70vw;
+    height: 70vh;
+    background-color: rgb(156, 155, 154);
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock-inner{
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.clock-center{
+
+    width: 20px;
+    height: 20px;
+    background-color: rgb(83, 71, 71);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+}
+
+.needle{
+    --rotation : 0;
+    background-color: rgb(102, 85, 85);
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%) ;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.h{
+
+    width: 12px;
+    height: 120px;
+    --rotation : 50;
+
+}
+
+.m{
+    width: 10px;
+    height: 150px;
+    --rotation : 80;
+}
+
+.s{
+    width: 8px;
+    height: 170px;
+    --rotation:0;
+}
+
+.dot{
+    height: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom; 
+}
+
+.dot::before{
+
+    content: '';
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot::after{
+
+    content: '';
+    width: 2.5px;
+    height: 2.5px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.dot:nth-child(1){rotate: 0deg;}
+.dot:nth-child(2){rotate: 12deg;}
+.dot:nth-child(3){rotate: 18deg;}
+.dot:nth-child(4){rotate: 24deg;}
+.dot:nth-child(5){rotate: 30deg;}
+.dot:nth-child(6){rotate: 36deg;}
+.dot:nth-child(7){rotate: 42deg;}
+.dot:nth-child(8){rotate: 48deg;}
+.dot:nth-child(9){rotate: 54deg;}
+.dot:nth-child(10){rotate: 60deg;}
+.dot:nth-child(11){rotate: 66deg;}
+.dot:nth-child(12){rotate: 72deg;}
+.dot:nth-child(13){rotate: 78deg;}
+.dot:nth-child(14){rotate: 84deg;}
+.dot:nth-child(15){rotate: 90deg;}
+.dot:nth-child(16){rotate: 96deg;}
+.dot:nth-child(17){rotate: 102deg;}
+.dot:nth-child(18){rotate: 108deg;}
+.dot:nth-child(19){rotate: 114deg;}
+.dot:nth-child(20){rotate: 120deg;}
+.dot:nth-child(21){rotate: 126deg;}
+.dot:nth-child(22){rotate: 132deg;}
+.dot:nth-child(23){rotate: 138deg;}
+.dot:nth-child(24){rotate: 144deg;}
+.dot:nth-child(25){rotate: 150deg;}
+.dot:nth-child(26){rotate: 156deg;}
+.dot:nth-child(27){rotate: 162deg;}
+.dot:nth-child(28){rotate: 168deg;}
+.dot:nth-child(29){rotate: 174deg;}
+.dot:nth-child(30){rotate: 180deg;}
+.dot:nth-child(31){rotate: 186deg;}
+.dot:nth-child(32){rotate: 192deg;}
+.dot:nth-child(33){rotate: 198deg;}
+.dot:nth-child(34){rotate: 204deg;}
+.dot:nth-child(35){rotate: 210deg;}
+.dot:nth-child(36){rotate: 216deg;}
+.dot:nth-child(37){rotate: 222deg;}
+.dot:nth-child(38){rotate: 228deg;}
+.dot:nth-child(39){rotate: 234deg;}
+.dot:nth-child(40){rotate: 240deg;}
+.dot:nth-child(41){rotate: 246deg;}
+.dot:nth-child(42){rotate: 252deg;}
+.dot:nth-child(43){rotate: 258deg;}
+.dot:nth-child(44){rotate: 264deg;}
+.dot:nth-child(45){rotate: 270deg;}
+.dot:nth-child(46){rotate: 276deg;}
+.dot:nth-child(47){rotate: 282deg;}
+.dot:nth-child(48){rotate: 288deg;}
+.dot:nth-child(49){rotate: 294deg;}
+.dot:nth-child(50){rotate: 300deg;}
+.dot:nth-child(51){rotate: 306deg;}
+.dot:nth-child(52){rotate: 312deg;}
+.dot:nth-child(53){rotate: 318deg;}
+.dot:nth-child(54){rotate: 324deg;}
+.dot:nth-child(55){rotate: 330deg;}
+.dot:nth-child(56){rotate: 336deg;}
+.dot:nth-child(57){rotate: 342deg;}
+.dot:nth-child(58){rotate: 348deg;}
+.dot:nth-child(59){rotate: 354deg;}
+.dot:nth-child(60){rotate: 360deg;}
+
+
+.dot:nth-child(1)::before{
+    content: '12';
+    transform: translate(-50%,-50%) rotate(-0deg);
+}
+.dot:nth-child(5)::before{
+    content: '1';
+    transform: translate(-50%,-50%) rotate(-30deg);
+}
+.dot:nth-child(10)::before{
+    content: '2';
+    transform: translate(-50%,-50%) rotate(-60deg);

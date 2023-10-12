@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(198,237,251);
+    user-select: none;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.preview{
+    margin-top: 10px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.container .main-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-btns button{
+    width: 90px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.main-btns button:hover{
+    opacity: 0.8;
+}
+
+.main-btns button:nth-child(1){
+
+    background-color: #5dbea3;
+    color: white;
+
+}
+
+.main-btns button:nth-child(2){
+
+    background-color: #55c2da;
+    color: white;
+
+}
+
+.main-btns button:nth-child(3){
+
+    background-color: #4681f4;
+    color: white;
+
+}
+
+.controls{
+    margin:10px 0 20px 0;
+    width: 90%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.controls .options{
+
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.controls .options button{
+
+    width: 100px;
+    height: 40px;
+    border-radius: 2px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.controls .scale{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.scale input[type='text']{
+    width: 25px;
+    height: 15px;
+    outline: 0;
+    text-align: center;
+}
+
+.preview img{
+    width: 100%;
+    height: 100%;
+}
+
+.active{
+
+    background-color: #4681f4;
+    color: white;
+}
+
+@media screen and (max-width:480px) {
+    
+    .preview{
+        height: 40%;
+    }
+    .options{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .scale{
+        margin-top: 25px;
+    }
+
+    .container{
+        height: 500px;
+    }
+}
+
+
+.container.disable :where(#reset, #save, .controls){
+
+    opacity: 0.7;
+    pointer-events: none;
+}
